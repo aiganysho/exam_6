@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{#{% block menu %}<li><a href="{% url "list-add" %}">Create To-Do list</a></li>{% endblock menu %}#}
+{% block page_header %}Гостевая книга{% endblock page_header %}
+{% block content %}
+    {% if not books %}
+        <h2>No To-Do List</h2>
+    {% endif %}
+
+    <div class="card">
+        {% for book in books %}
+          <div class="card-header">
+            {{ book.author}} ({{ book.email }})
+                <a href="#"><i class="far fa-edit"></i></a>
+                <a href="#"><i class="fas fa-id-badge"></i></a>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ book.text }}</p>
+                </br>
+          </div>
+        {% endfor %}
+    </br>
+    </div>
+    </br>
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{#{% block menu %}#}
+{#    <li><a href="{% url "add-product" %}">Create product</a></li>#}
+{#    <li><a href="{% url "update-product" product.id %}">Edit product</a></li>#}
+{#    <li><a href="{% url "delete-product" product.id %}">Delete product</a></li>#}
+{#{% endblock menu %}#}
+{#{% block page_header %}Product: {{ product.id }}{% endblock page_header %}#}
+{% block content %}
+
+    <p>Name: {{ book.author }}</p>
+    <p>{{ book.email }}</p>
+    <p>{{ book.time_of_creation }}</p>
+    <p>{{ book.time_of_creation }}</p>
+    <p>{{ book.text }}</p>
+
+{% endblock content %}l>
