@@ -1,0 +1,122 @@
+[
+{
+  "model": "webapp.guestbook",
+  "pk": 1,
+  "fields": {
+    "author": "jdsfjds",
+    "email": "ann_john@gmail.com",
+    "text": "tfvkuhbjioghiu",
+    "time_of_creation": "2021-03-06T06:23:01.143Z",
+    "time_of_update": "2021-03-06T06:23:01.143Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 2,
+  "fields": {
+    "author": "Kim Kana",
+    "email": "kana@gmaol.com",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, qui impedit. A praesentium magnam distinctio, enim et non quaerat perspiciatis laboriosam eum itaque. Aut asperiores alias eveniet dolor, totam error",
+    "time_of_creation": "2021-03-06T06:34:51.978Z",
+    "time_of_update": "2021-03-06T06:34:51.978Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 3,
+  "fields": {
+    "author": "Ann John",
+    "email": "ann_john@gmail.com",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, qui impedit. A praesentium magnam distinctio, enim et non quaerat perspiciatis laboriosam eum itaque. Aut asperiores alias eveniet dolor, totam error",
+    "time_of_creation": "2021-03-06T06:35:06.592Z",
+    "time_of_update": "2021-03-06T06:35:06.592Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 4,
+  "fields": {
+    "author": "Feras Malik",
+    "email": "feraso@gmail.com",
+    "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis libero laudantium unde perferendis ullam accusantium ut vitae",
+    "time_of_creation": "2021-03-06T06:41:17.229Z",
+    "time_of_update": "2021-03-06T06:41:17.229Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 5,
+  "fields": {
+    "author": "Alex Rose",
+    "email": "alexa@gmail.com",
+    "text": "Lorem ipsum dolor sit, amet",
+    "time_of_creation": "2021-03-06T06:43:21.894Z",
+    "time_of_update": "2021-03-06T06:43:21.894Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 6,
+  "fields": {
+    "author": "Jordan Will",
+    "email": "jordan@gmail.com",
+    "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis libero laudantium unde perferendis ullam accusantium ut vitae voluptatibus ad? Tempore ullam eius voluptatem quos necessitatibus, at enim quibusdam aliquam perferendis",
+    "time_of_creation": "2021-03-06T06:45:12.066Z",
+    "time_of_update": "2021-03-06T06:45:12.066Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 7,
+  "fields": {
+    "author": "Tom Duli",
+    "email": "tom_duli@gmail.com",
+    "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    "time_of_creation": "2021-03-06T06:46:27.003Z",
+    "time_of_update": "2021-03-06T06:46:27.003Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$6IAXvvHoWt5y$ZlWEQrBaOP3PWIfXLmWPXNs1ekgpCHbyJwNtlhGlQLE=",
+    "last_login": "2021-03-06T05:55:09.406Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-03-06T05:54:27.306Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$PwT2GZ3namwH$iiiluqGgwHsONN7ObIVnhEgygykbCP772mfoKGCrE9c=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "adminka",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-03-06T06:07:08.335Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
