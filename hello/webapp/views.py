@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 
 from webapp.models import Guestbook, status_choices
-from webapp.form import BookForm
+from webapp.form import BookForm, BookDeleteForm
 
 # Create your views here.
 
@@ -13,19 +13,45 @@ def book_view(request, pk):
     book = Guestbook.objects.get(id=pk)
     return render(request, 'book_view.html', context={'book': book})
 
-# def add_book(request):
-#     if request.method == 'GET':
-#         form = BookForm()
-#         return render(request, 'create_product.html', {'category': categories, 'form': form})
-#     elif request.method == "POST":
-#         form = ProductForm(data=request.POST)
-#         if form.is_valid():
-#             product = Product.objects.create(
-#                 name=form.cleaned_data.get("name"),
-#                 description=form.cleaned_data.get("description"),
-#                 category=form.cleaned_data.get("category"),
-#                 remainder=form.cleaned_data.get("remainder"),
-#                 price=form.cleaned_data.get("price")
-#             )
-#             return redirect('view-product', pk=product.id)
-#         return render(request, 'create_product.html', context={'form': form})
+def add_book(request):
+    if request.method == 'GET':
+        form = BookForm()
+        return render(request, 'add_book.html', {'form': form})
+    elif request.method == "POST":
+        form = BookForm(data=request.POST)
+        if form.is_valid():
+            books = Guestbook.objects.create(
+                author=form.cleaned_data.get("author"),
+                email=form.cleaned_data.get("email"),
+                text=form.cleaned_data.get("text")
+            )
+            return redirect('list-book')
+        return render(request, 'add_book.html', context={'form': form})
+
+def book_update_view(request):
+    books = Guestbook.objects
+    if request.method == 'GET':
+        form = BookForm(
+            initial={
+                'author': books.author,
+                'email': books.email,
+                'text': books.text
+            })
+        return render(request, 'book_update.html', context={'form': form, 'books': books})
+    elif request.method == 'POST':
+        form = BookForm(data=request.POST)
+        if form.is_valid():
+            books.author = form.cleaned_data.get("author")
+            books.email = form.cleaned_data.get("email")
+            books.text = form.cleaned_data.get("text")
+            books.save()
+            return redirect('list-book')
+        return render(request, 'book_update.html', context={'form': form, 'books': books})
+
+def book_delete_view(request):
+    books = Guestbook.objects
+    if request.method == "GET":
+        return render(request, 'book_delete.html', context={'books': books})
+    elif request.method == 'POST':
+        books.delete()
+        return redirect('list-book')

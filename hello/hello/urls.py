@@ -17,9 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from webapp.views import (
     list_book_view,
+    add_book,
+    book_update_view,
+    book_delete_view
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', list_book_view, name='list-book'),
+    path('book/add/', add_book, name="add-book"),
+    path('update/', book_update_view, name='update-book'),
+    path('delete/', book_delete_view, name='delete-book')
 ]

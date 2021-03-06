@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block menu %}<li><a href="{% url "list-book" %}">Back </a></li>{% endblock menu %}
+{% block page_header %}Редактировать запись{% endblock page_header %}
+
+{% block content %}
+    <form action="{% url "update-book" %}" method="post">
+        {% include "form.html" with button_text="добавить" %}
+    </form>
+{% endblock content %}

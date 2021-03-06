@@ -5,8 +5,8 @@ status_choices = [("active", "Активно"), ("blocked", "Заблокиро�
 
 class Guestbook(models.Model):
     author = models.CharField(max_length=150, null=False, blank=False,  verbose_name='Автор')
-    email = models.EmailField(max_length=150, null=False, blank=False, verbose_name='Почта автора')
-    text = models.TextField(max_length=3000, null=False, blank=False, verbose_name='Текст записи')
+    email = models.EmailField(max_length=150, null=False, blank=False, verbose_name='Почта ')
+    text = models.TextField(max_length=3000, null=False, blank=False, verbose_name='Текст ')
     time_of_creation = models.DateTimeField(auto_now_add=True)
     time_of_update = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=150, null=False, blank=False, choices=status_choices, default="active")
